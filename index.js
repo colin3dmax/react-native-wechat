@@ -19,8 +19,7 @@ function wrapRegisterApp(nativeFunc) {
   }
   return (...args) => {
     if (isAppRegistered) {
-      // FIXME(Yorkie): we ignore this error if AppRegistered is true.
-      return Promise.resolve(true);
+      return Promise.reject(new Error('App is already registered.'));
     }
     isAppRegistered = true;
     return new Promise((resolve, reject) => {

@@ -64,14 +64,16 @@ your app project, _if there is something that not working, please check the list
 - Add "URL Schema" as your app id for "URL type" in `Targets` > `info`, See the following screenshot for the view on your XCode
     ![Set URL Schema in XCode](https://res.wx.qq.com/open/zh_CN/htmledition/res/img/pic/app-access-guide/ios/image0042168b9.jpg)
 
-- Only for iOS 9, add `wechat` and `weixin` into `LSApplicationQueriesSchemes` in `Targets` > `info` > `Custom iOS Target Properties`. Or edit `Info.plist` then add:
+- Only for iOS 9, add `wechat` and `weixin` into `LSApplicationQueriesSchemes` in `Targets` > `info` > `Custom iOS Target Properties`.
+
+or edit Info.plist add:
 
     ```
-      <key>LSApplicationQueriesSchemes</key>
-      <array>
+    <key>LSApplicationQueriesSchemes</key>
+    <array>
         <string>weixin</string>
         <string>wechat</string>
-      </array>
+    </array>
     ```
 
 
@@ -169,11 +171,13 @@ your app project, _if there is something that not working, please check the list
     ```xml
     <manifest>
       <application>
+        <!-- WeChat Auth/Share Activity -->
         <activity
           android:name=".wxapi.WXEntryActivity"
           android:label="@string/app_name"
           android:exported="true"
         />
+        <!-- WeChat Payment Activity -->
         <activity
           android:name=".wxapi.WXPayEntryActivity"
           android:label="@string/app_name"
