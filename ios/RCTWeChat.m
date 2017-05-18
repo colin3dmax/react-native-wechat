@@ -154,11 +154,11 @@ RCT_EXPORT_METHOD(pay:(NSDictionary *)data
                   :(RCTResponseSenderBlock)callback)
 {
     PayReq* req             = [PayReq new];
-    req.partnerId           = data[@"partnerId"];
-    req.prepayId            = data[@"prepayId"];
-    req.nonceStr            = data[@"nonceStr"];
-    req.timeStamp           = [data[@"timeStamp"] unsignedIntValue];
+    req.partnerId           = data[@"partnerid"];
+    req.prepayId            = data[@"prepayid"];
     req.package             = data[@"package"];
+    req.nonceStr            = data[@"noncestr"];
+    req.timeStamp           = [data[@"timestamp"] unsignedIntValue];
     req.sign                = data[@"sign"];
     BOOL success = [WXApi sendReq:req];
     callback(@[success ? [NSNull null] : INVOKE_FAILED]);
@@ -343,7 +343,7 @@ RCT_EXPORT_METHOD(pay:(NSDictionary *)data
 
 -(void) onReq:(BaseReq*)req
 {
-    // TODO(Yorkie)
+
 }
 
 -(void) onResp:(BaseResp*)resp
