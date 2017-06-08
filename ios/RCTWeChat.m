@@ -74,6 +74,17 @@ RCT_EXPORT_METHOD(isWXAppInstalled:(RCTResponseSenderBlock)callback)
     callback(@[[NSNull null], @([WXApi isWXAppInstalled])]);
 }
 
+
+RCT_EXPORT_METHOD(jumpToBizProfile:(NSString *)appid)
+{
+    JumpToBizProfileReq *req = [[JumpToBizProfileReq alloc]init];
+    req.profileType = WXBizProfileType_Normal;
+    req.username = appid; //公众号原始ID
+    [WXApi sendReq:req];
+}
+
+
+
 RCT_EXPORT_METHOD(isWXAppSupportApi:(RCTResponseSenderBlock)callback)
 {
     callback(@[[NSNull null], @([WXApi isWXAppSupportApi])]);
@@ -382,6 +393,9 @@ RCT_EXPORT_METHOD(pay:(NSDictionary *)data
 	        body[@"type"] = @(r.type);
 	        body[@"returnKey"] =r.returnKey;
 	        body[@"type"] = @"PayReq.Resp";
+        
+            NSLog(@"%@",body);
+        
 	        [self.bridge.eventDispatcher sendDeviceEventWithName:RCTWXEventName body:body];
     	}
 }
