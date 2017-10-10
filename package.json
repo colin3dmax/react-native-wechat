@@ -1,25 +1,16 @@
 {
- "name": "@cross2d/react-native-wechat",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "version": "1.0.0",
-  "author": "Yorkie Liu <yorkiefixer@gmail.com>",
-  "bugs": {
-    "url": "https://github.com/weflex/react-native-wechat/issues"
-  },
-  "contributors": [
-    "Yorkie Liu <yorkiefixer@gmail.com>",
-    "Deng Yun <tdzl2003@gmail.com>",
-    "Colin3dmax <colin3dmax@163.com>"
-  ],
-  "dependencies": {
-    "events": "1.0.2"
-  },
+  "name": "@cross2d/react-native-wechat",
+  "version": "1.0.1",
   "description": "react-native library for wechat app",
-  "devDependencies": {},
-  "directories": {},
-  "homepage": "https://github.com/weflex/react-native-wechat#readme",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo 1",
+    "release":"npm publish --access public"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/weflex/react-native-wechat.git"
+  },
   "keywords": [
     "wechat",
     "react",
@@ -27,17 +18,26 @@
     "react-component",
     "ios"
   ],
-  "license": "MIT",
-  "main": "index.js",
-  "maintainers": [
-    "yorkie <yorkiefixer@gmail.com>"
-  ],
-  "optionalDependencies": {},
+  "dependencies": {
+    "events": "1.0.2"
+  },
   "peerDependencies": {
     "react-native": ">=0.40"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+ssh://git@github.com/weflex/react-native-wechat.git"
-  }
+  "author": "Yorkie Liu <yorkiefixer@gmail.com>",
+  "contributors": [
+    {
+      "name": "Yorkie Liu",
+      "email": "yorkiefixer@gmail.com"
+    },
+    {
+      "name": "Deng Yun",
+      "email": "tdzl2003@gmail.com"
+    }
+  ],
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/weflex/react-native-wechat/issues"
+  },
+  "homepage": "https://github.com/weflex/react-native-wechat#readme"
 }
