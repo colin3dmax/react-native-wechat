@@ -1,6 +1,6 @@
 {
   "name": "@cross2d/react-native-wechat",
-  "version": "1.0.3",
+  "version": "1.0.6",
   "description": "react-native library for wechat app",
   "main": "index.js",
   "scripts": {
@@ -39,12 +39,5 @@
   "bugs": {
     "url": "https://github.com/weflex/react-native-wechat/issues"
   },
-  "homepage": "https://github.com/weflex/react-native-wechat#readme",
-  "rnpm": {
-    "ios": {
-      "sharedLibraries": [
-        "libsqlite3"
-      ]
-    }
-  }
+  "homepage": "https://github.com/weflex/react-native-wechat#readme"
 }
